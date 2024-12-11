@@ -11,97 +11,121 @@
 </head>
 
 <body>
-    <h1>My Plans for the Year</h1>
+    <header>
+        <h1>My Plans for the Year</h1>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="#journey">Web Development Journey</a>
+                </li>
+                <li>
+                    <a href="#vacation">Vacation Plans</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
     <hr>
-
-    <nav>
-        <ul>
-            <li>
-                <a href="#journey">Web Development Journey</a>
-            </li>
-            <li>
-                <a href="#vacation">Vacation Plans</a>
-            </li>
-        </ul>
-    </nav>
-
-    <hr>
-
-    <section id="learn">
-        <h2>I'm Ready to Learn Web Development</h2>
-        <p>Join me on an exciting journey as I explore the fundamentals of web development.</p>
-        <img src="img/html5-logo-300x300.png" alt="HTML5 Logo" title="Learning web development starting with HTML5"
-            width="300" height="300">
-        <figure>
-            <figcaption>A Showcase of HTML5 code</figcaption>
-            <p>
-                <code>&lt;h1&gt;Hello, World!&lt;/h1&gt;</code>
-            </p>
-        </figure>
-        <h3>My Daily Achievement Plan</h3>
-        <p>Let me share how I approach my day-to-day activities:</p>
-        <ol>
-            <li>...Expand my web development skills with courses and tutorials.</li>
-            <li>...Strategically plan to boost efficiency and productivity.</li>
-            <li>...Enhance my knowledge using <abbr title="Mozilla Developer Network">
-                    <a href="https://developer.mozilla.org/">MDN</a>
-                </abbr> resources.</li>
-        </ol>
-    </section>
-
-    <hr>
-
-    <section id="vacation">
-        <h2>Planning a Relaxing Vacation</h2>
-        <p>After all my hard work, I <em>really need a break</em> to relax and recharge.</p>
-        <p>Living in <abbr title="Manila">MNL</abbr>, I plan to go to a serene hot spring in Asia to unwind and
-            rejuvenate.</p>
-
-        <h3>Places I'd Love to Visit</h3>
-        <ul>
-            <li>
-                <p>Japan's hot springs have always held a special charm for me.</p>
+    <main>
+        <article id="learn">
+            <h2>I'm Ready to Learn Web Development</h2>
+            <p>Join me on an exciting journey as I explore the fundamentals of web development.</p>
+            <section>
+                <h3>HTML5</h3>
+                <img src="img/html5-logo-300x300.png" alt="HTML5 Logo"
+                    title="Learning web development starting with HTML5" width="300" height="300">
                 <figure>
-                    <img src="img/hgp-hakone-aiart-400x275.jpg" alt="Tranquil hot spring in Hakone, Japan"
-                        title="Dreaming of visiting a hot spring in Japan" width="400" height="275" loading="lazy">
-                    <figcaption>Vacation at a Hot Spring in Japan</figcaption>
+                    <figcaption>A Showcase of HTML5 code</figcaption>
+                    <p>
+                        <code>&lt;h1&gt;Hello, World!&lt;/h1&gt;</code>
+                    </p>
                 </figure>
-            </li>
-            <li>
-                <p>One place that comes highly recommended is:</p>
-                <address>
-                    Hakone Yuryo<br>
-                    4 Tonosawa, Hakone,<br>
-                    Ashigarashimo District,<br>
-                    Kanagawa 250-0315, Japan
-                </address>
-                <figure>
-                    <img src="img/hakone-yuryo-aiart-400x200.jpg" alt="Evening at Hakone Yuryo hot spring, Japan"
-                        title="&quot;Once in a lifetime encounter.&quot;" width="400" height="200" loading="lazy">
-                    <figcaption>A Night in Hakone Yuryo</figcaption>
-                </figure>
-            </li>
-        </ul>
-        <!-- TODO: Add more destinations -->
-        <h3>Places I'd Prefer to Avoid</h3>
-        <dl>
-            <dt>Death Valley, USA</dt>
-            <dd>Extreme heat conditions, highly <strong>dangerous</strong>.</dd>
+            </section>
+            <section>
+                <h3>My Daily Achievement Plan</h3>
+                <p>Let me share how I approach my day-to-day activities:</p>
+                <ol>
+                    <li>...Expand my web development skills with courses and tutorials.</li>
+                    <li>...Strategically plan to boost efficiency and productivity.</li>
+                    <li>...Enhance my knowledge using <abbr title="Mozilla Developer Network">
+                            <a href="https://developer.mozilla.org/">MDN</a>
+                        </abbr> resources.</li>
+                </ol>
+                <aside>
+                    <details>
+                        <summary>Can you figure out how many <mark>hours</mark> I spend coding each day?</summary>
+                        <p>I start my coding journey every evening at <time datetime="19:00">7 PM</time> and dedicate
+                            <time datetime="PT2H">2 hours</time> to it.
+                        </p>
+                    </details>
+                </aside>
+            </section>
+        </article>
 
-            <dt>Chernobyl, Ukraine</dt>
-            <dd>Severely contaminated due to a nuclear disaster.</dd>
+        <hr>
 
-            <dt>Mount Everest, Nepal</dt>
-            <dd>Popular but perilous due to severe weather and high altitude.</dd>
-        </dl>
-    </section>
+        <article id="vacation">
+            <h2>Planning a Relaxing Vacation</h2>
+            <p>After all my hard work, I <em>really need a break</em> to relax and recharge.</p>
+            <p>Living in <abbr title="Manila">MNL</abbr>, I plan to go to a serene hot spring in Asia to unwind and
+                rejuvenate.</p>
 
+            <section>
+                <h3>Places I'd Love to Visit</h3>
+                <ul>
+                    <li>
+                        <p>Japan's hot springs have always held a special charm for me.</p>
+                        <figure>
+                            <img src="img/hgp-hakone-aiart-400x275.jpg" alt="Tranquil hot spring in Hakone, Japan"
+                                title="Dreaming of visiting a hot spring in Japan" width="400" height="275"
+                                loading="lazy">
+                            <figcaption>Vacation at a Hot Spring in Japan</figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <p>One place that comes highly recommended is:</p>
+                        <address>
+                            Hakone Yuryo<br>
+                            4 Tonosawa, Hakone,<br>
+                            Ashigarashimo District,<br>
+                            Kanagawa 250-0315, Japan
+                        </address>
+                        <figure>
+                            <img src="img/hakone-yuryo-aiart-400x200.jpg"
+                                alt="Evening at Hakone Yuryo hot spring, Japan"
+                                title="&quot;Once in a lifetime encounter.&quot;" width="400" height="200"
+                                loading="lazy">
+                            <figcaption>A Night in Hakone Yuryo</figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </section>
+            <!-- TODO: Add more destinations -->
+            <section>
+                <h3>Places I'd Prefer to Avoid</h3>
+                <dl>
+                    <dt>Death Valley, USA</dt>
+                    <dd>Extreme heat conditions, highly <strong>dangerous</strong>.</dd>
+
+                    <dt>Chernobyl, Ukraine</dt>
+                    <dd>Severely contaminated due to a nuclear disaster.</dd>
+
+                    <dt>Mount Everest, Nepal</dt>
+                    <dd>Popular but perilous due to severe weather and high altitude.</dd>
+                </dl>
+            </section>
+        </article>
+    </main>
     <hr>
-    &lt; &gt; &copy; <a href="about.html">JJ Ginon</a> &lt;/ &gt;
-    <p>
-        <a href="#">Back to Top</a>
-    </p>
+    <footer>
+        <p>
+            &lt; &gt; &copy; <a href="about.html">JJ Ginon</a> &lt;/ &gt;
+        </p>
+        <p>
+            <a href="#">Back to Top</a>
+        </p>
+    </footer>
 </body>
 
 </html>
