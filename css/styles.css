@@ -41,6 +41,7 @@ dl {
 
 a {
     color: #81d4fa;
+    text-decoration: none;
 }
 
 a:visited {
@@ -48,8 +49,13 @@ a:visited {
 }
 
 a:hover,
-a:active {
+a:focus {
     color: #03a9f4;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #ff7171;
 }
 
 h1 {
