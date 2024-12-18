@@ -6,7 +6,14 @@
     box-sizing: border-box;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 input,
+select,
 button,
 textarea {
     font: inherit;
@@ -16,34 +23,52 @@ body {
     background-color: #343434;
     color: #fffafa;
     min-height: 100vh;
-    padding: 1.5rem;
+    max-width: 720px;
+    margin: 0 auto;
+    border-left: 1px solid #fffafa;
+    border-right: 1px solid #fffafa;
+
     font-family: "Open Sans", sans-serif;
 }
 
-header {
+h1 {
     padding: 1rem 0;
 }
 
-h1,
+main {
+    padding: 1.5rem;
+}
+
+h2,
 h3 {
     padding: 1rem 0;
 }
 
-h2 {
-    padding: 1rem 0;
-}
-
-ul,
-ol,
-dl {
-    margin: 0 1.2rem 1.2rem 1.2rem;
-    line-height: 1.5;
-}
-
-ul:first-child {
+nav {
+    background-color: #232323;
+    margin: 0;
     font-size: 1.2rem;
-    list-style-type: none;
     text-align: center;
+    overflow: hidden;
+}
+
+nav ul {
+    margin: 0;
+    list-style-type: none;
+}
+
+nav ul li {
+    border-top: 2px solid #fffafa;
+}
+
+nav ul li a {
+    display: block;
+    padding: 1rem;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: #555;
 }
 
 a {
@@ -70,7 +95,30 @@ h1 {
 }
 
 p {
-    padding: 0.5rem 0;
+    padding-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+details p {
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+table,
+tr,
+th,
+td,
+caption {
+    border: 2px solid #555;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    padding: 1rem;
+}
+
+ul,
+ol,
+dl {
+    margin: 0 0 1rem 1rem;
     line-height: 1.5;
 }
 
@@ -85,25 +133,36 @@ address {
 legend {
     padding: 0.5rem;
     text-align: center;
+    font-weight: bold;
 }
 
-fieldset p {
+fieldset {
+    border-radius: 10px;
     padding: 1rem;
 }
 
+fieldset:first-of-type p label {
+    display: block;
+}
+
+fieldset:last-of-type label {
+    display: block;
+}
+
+input:not([type=radio], [type=checkbox]),
+select,
 textarea {
-    margin: 0.5rem;
+    padding: 0.5em;
+    border-radius: 10px;
+    border-width: 2px;
+    width: 100%;
 }
 
-table,
-tr,
-th,
-td,
-caption {
-    border: 2px solid #555;
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    padding: 1rem;
+button {
+    padding: 0.5em;
+    width: 25%;
+    border-radius: 10px;
+    background-color: #fffafa;
 }
 
 footer {
