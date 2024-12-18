@@ -19,23 +19,39 @@ textarea {
     font: inherit;
 }
 
+.center {
+    text-align: center;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: #010409;
+}
+
 body {
-    background-color: #343434;
-    color: #fffafa;
+    background-color: #0d1117;
+    color: #e6edf3;
     min-height: 100vh;
     max-width: 720px;
     margin: 0 auto;
-    border-left: 1px solid #fffafa;
-    border-right: 1px solid #fffafa;
-
+    border-left: 1px solid #6e7681;
+    border-right: 1px solid #6e7681;
     font-family: "Open Sans", sans-serif;
+}
+
+header {
+    background-color: #161b22;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 h1 {
     padding: 1rem 0;
 }
 
-main {
+article {
+    scroll-margin-top: 10.5rem;
     padding: 1.5rem;
 }
 
@@ -45,10 +61,10 @@ h3 {
 }
 
 nav {
-    background-color: #232323;
     margin: 0;
     font-size: 1.2rem;
     text-align: center;
+    border-bottom: 1px solid #6e7681;
     overflow: hidden;
 }
 
@@ -58,36 +74,32 @@ nav ul {
 }
 
 nav ul li {
-    border-top: 2px solid #fffafa;
+    border-top: 2px solid #6e7681;
 }
 
 nav ul li a {
     display: block;
-    padding: 1rem;
+    padding: 0.5rem;
 }
 
 nav ul li a:hover,
 nav ul li a:focus {
-    background-color: #555;
+    background-color: hsla(208, 100%, 74%, 0.1);
 }
 
 a {
-    color: #81d4fa;
+    color: #79c0ff;
     text-decoration: none;
-}
-
-a:visited {
-    color: #ce93d8;
 }
 
 a:hover,
 a:focus {
-    color: #03a9f4;
+    color: #7ee787;
     text-decoration: underline;
 }
 
 a:active {
-    color: #ff7171;
+    color: #ff7b72;
 }
 
 h1 {
@@ -109,7 +121,7 @@ tr,
 th,
 td,
 caption {
-    border: 2px solid #555;
+    border: 2px solid #6e7681;
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     padding: 1rem;
@@ -152,6 +164,7 @@ fieldset:last-of-type label {
 input:not([type=radio], [type=checkbox]),
 select,
 textarea {
+    background-color: #fffafa;
     padding: 0.5em;
     border-radius: 10px;
     border-width: 2px;
@@ -162,9 +175,19 @@ button {
     padding: 0.5em;
     width: 25%;
     border-radius: 10px;
-    background-color: #fffafa;
+    background-color: #e6edf3;
+    cursor: pointer;
 }
 
 footer {
+    position: sticky;
+    bottom: 0;
+    background-color: #161b22;
+    padding: 0.5rem;
     text-align: center;
+    border-top: 1px solid #6e7681;
+}
+
+footer p {
+    padding: 0;
 }
