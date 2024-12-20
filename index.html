@@ -62,56 +62,65 @@
                 </aside>
                 <br>
                 <table>
-                    <caption>My Daily Schedule</caption>
+                    <caption class="offscreen">My Daily Schedule</caption>
                     <thead>
                         <tr>
-                            <th>&nbsp;</th>
-                            <th scope="col">Time</th>
-                            <th scope="col">Activity</th>
+                            <th scope="col" class="sched__header">&nbsp;</th>
+                            <th scope="col" class="sched__header">Time</th>
+                            <th scope="col" class="sched__header">Activity</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <th scope="row">Morning</th>
-                            <td>
-                                <time datetime="08:00">8 AM</time>-<time datetime="12:00">12 PM</time>
+                            <th scope="row" class="sched__item sched__mr">Morning</th>
+                            <td class="sched__item">
+                                <span>
+                                    <time datetime="08:00">8 AM</time> - <time datetime="12:00">12
+                                        PM</time>
+                                </span>
                             </td>
-                            <td>Morning Routine</td>
+                            <td class="sched__item">Morning Routine</td>
                         </tr>
                         <tr>
-                            <th scope="row">Break</th>
-                            <td>
-                                <time datetime="12:00">12 PM</time>-<time datetime="13:00">1 PM</time>
+                            <th scope="row" class="sched__br sched__item">Break</th>
+                            <td class="sched__item">
+                                <span>
+                                    <time datetime="12:00">12 PM</time> - <time datetime="13:00">1 PM</time>
+                                </span>
                             </td>
-                            <td>Eat Lunch</td>
+                            <td class="sched__item">Eat Lunch</td>
                         </tr>
                         <tr>
-                            <th scope="row">Afternoon</th>
-                            <td>
-                                <time datetime="13:00">1 PM</time>-<time datetime="19:00">7 PM</time>
+                            <th scope="row" class="sched__af sched__item">Afternoon</th>
+                            <td class="sched__item">
+                                <span>
+                                    <time datetime="13:00">1 PM</time> - <time datetime="19:00">7 PM</time>
+                                </span>
                             </td>
-                            <td>Work</td>
+                            <td class="sched__item">Work</td>
                         </tr>
                         <tr>
-                            <th scope="row">Evening</th>
-                            <td>
-                                <time datetime="19:00">7 PM</time>-<time datetime="21:00">9 PM</time>
+                            <th scope="row" class="sched__item sched__ev">Evening</th>
+                            <td class="sched__item">
+                                <span>
+                                    <time datetime="19:00">7 PM</time> - <time datetime="21:00">9 PM</time>
+                                </span>
                             </td>
-                            <td>Code</td>
+                            <td class="sched__item">Code</td>
                         </tr>
                         <tr>
-                            <th scope="row">Early Night</th>
-                            <td rowspan="2">Other Times</td>
-                            <td>Free Time</td>
+                            <th scope="row" class="sched__item sched__en">Early Night</th>
+                            <td rowspan="2" class="sched__item sched__ot">Other Times</td>
+                            <td class="sched__item">Free Time</td>
                         </tr>
                         <tr>
-                            <th scope="row">Late Night</th>
-                            <td>Sleep</td>
+                            <th scope="row" class="sched__item sched__ln">Late Night</th>
+                            <td class="sched__item">Sleep</td>
                         </tr>
                     </tbody>
                     <tfoot>
                         <tr>
-                            <td colspan="3">
+                            <td colspan="3" class="sched__item sched__footer">
                                 That's my weekday groove: code, eat, study, unwind, and recharge. It's a balanced blend
                                 of productivity and relaxation, keeping me sharp and energized.
                             </td>
