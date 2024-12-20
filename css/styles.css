@@ -19,6 +19,11 @@ textarea {
     font: inherit;
 }
 
+.offscreen {
+    position: absolute;
+    left: -10000px
+}
+
 .center {
     text-align: center;
 }
@@ -127,14 +132,102 @@ details p {
     font-style: italic;
 }
 
-table,
-tr,
-th,
-td,
-caption {
-    border: 2px solid #6e7681;
-    border-collapse: collapse;
-    padding: 1rem;
+thead,
+tbody,
+tfoot,
+tr {
+    display: contents;
+}
+
+table {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "hd1 hd1 hd3"
+        "mr mrt mra"
+        "br brt bra"
+        "af aft afa"
+        "ev evt eva"
+        "en ot ena"
+        "ln ot lna"
+        "ft ft ft"
+    ;
+    gap: 0.1em;
+    margin-bottom: 1em;
+}
+
+.sched__header {
+    border-bottom: 2px solid #6e7681;
+}
+
+.sched__mr {
+    grid-area: mr;
+}
+
+.sched__br {
+    grid-area: br;
+}
+
+.sched__af {
+    grid-area: af;
+}
+
+.sched__ev {
+    grid-area: ev;
+}
+
+.sched__en {
+    grid-area: en;
+}
+
+.sched__ln {
+    grid-area: ln;
+}
+
+.sched__ot {
+    grid-row: span 2;
+}
+
+.sched__footer {
+    grid-column: span 3;
+}
+
+.sched__mr,
+.sched__br,
+.sched__af,
+.sched__ev,
+.sched__en,
+.sched__ln,
+.sched__header,
+.sched__footer {
+    height: 100%;
+    display: grid;
+    place-content: center;
+}
+
+.sched__header,
+.sched__item {
+    width: 100%;
+    padding: 1em;
+    border: medium ridge #6e7681;
+}
+
+.sched__item {
+    display: grid;
+    place-content: center;
+}
+
+thead th:first-child {
+    border-top-left-radius: 10px;
+}
+
+thead th:last-child {
+    border-top-right-radius: 10px;
+}
+
+tfoot td {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 ul,
