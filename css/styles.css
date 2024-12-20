@@ -67,7 +67,7 @@ h3 {
 }
 
 article {
-    scroll-margin-top: 10.5rem;
+    scroll-margin-top: 18vh;
     padding: 1.5rem;
 }
 
@@ -75,17 +75,15 @@ nav {
     margin: 0;
     font-size: 1.2rem;
     text-align: center;
-    border-bottom: 1px solid #6e7681;
+    border: 2px solid #6e7681;
     overflow: hidden;
 }
 
 nav ul {
+    display: flex;
+    justify-content: space-evenly;
     margin: 0;
     list-style-type: none;
-}
-
-nav ul li {
-    border-top: 2px solid #6e7681;
 }
 
 nav ul li a {
@@ -97,6 +95,7 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a:focus {
+    border-radius: 10px;
     background-color: hsla(208, 100%, 74%, 0.1);
 }
 
@@ -108,7 +107,6 @@ a {
 a:hover,
 a:focus {
     color: #7ee787;
-    text-decoration: underline;
 }
 
 a:active {
