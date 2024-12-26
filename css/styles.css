@@ -21,7 +21,7 @@ textarea {
 
 .offscreen {
     position: absolute;
-    left: -10000px
+    left: -10000px;
 }
 
 .center {
@@ -37,7 +37,7 @@ body {
     background-color: #0d1117;
     color: #e6edf3;
     min-height: 100vh;
-    max-width: 720px;
+    max-width: 100%;
     margin: 0 auto;
     border-left: 1px solid #6e7681;
     border-right: 1px solid #6e7681;
@@ -73,7 +73,7 @@ h3 {
 }
 
 article {
-    scroll-margin-top: 18vh;
+    scroll-margin-top: 7.675rem;
     padding: 1.5rem;
 }
 
@@ -152,8 +152,7 @@ table {
         "ev evt eva"
         "en ot ena"
         "ln ot lna"
-        "ft ft ft"
-    ;
+        "ft ft ft";
     gap: 0.1em;
     margin-bottom: 1em;
 }
@@ -194,17 +193,11 @@ table {
     grid-column: span 3;
 }
 
-.sched__mr,
-.sched__br,
-.sched__af,
-.sched__ev,
-.sched__en,
-.sched__ln,
-.sched__header,
-.sched__footer {
+.sched__item {
     height: 100%;
     display: grid;
     place-content: center;
+    text-align: center;
 }
 
 .sched__header,
@@ -322,4 +315,72 @@ footer p {
     font-family: "Inconsolata", serif;
     font-weight: bold;
     padding: 0;
+    margin-top: 0;
+}
+
+/* Mobile (small)*/
+@media screen and (max-width: 320.99px) {
+    html {
+        font-size: 0.675rem;
+    }
+
+    article {
+        scroll-margin-top: 7.675rem;
+    }
+}
+
+/* Mobile (medium)*/
+@media screen and (min-width: 321px) and (max-width: 375.99px) {
+    html {
+        font-size: 0.8rem;
+    }
+
+    article {
+        scroll-margin-top: 7.675rem;
+    }
+}
+
+/* Mobile (large)*/
+@media screen and (min-width: 376px) and (max-width: 425.99px) {
+    html {
+        font-size: 0.8rem;
+    }
+
+    article {
+        scroll-margin-top: 7.685rem;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 426px) and (max-width: 768.99px) {
+    html {
+        font-size: 0.925rem;
+    }
+
+    article {
+        scroll-margin-top: 7.7rem;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 769px) and (max-width: 1440.99px) {
+    body {
+        max-width: 720px;
+    }
+
+    article {
+        scroll-margin-top: 7.7rem;
+
+    }
+}
+
+/* Large Desktop */
+@media screen and (min-width: 1441px) {
+    body {
+        max-width: 720px;
+    }
+
+    article {
+        scroll-margin-top: 7.7rem;
+    }
 }
