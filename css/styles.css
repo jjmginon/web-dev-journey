@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+/* || RESET */
 * {
     margin: 0;
     padding: 0;
@@ -19,33 +20,56 @@ textarea {
     font: inherit;
 }
 
+/* || UTILITY CLASSES */
 .offscreen {
     position: absolute;
     left: -10000px;
 }
 
+/* || VARIABLES */
+:root {
+    /* FONTS */
+    --FF: "Open Sans", sans-serif;
+    --FF-HEADINGS: "Inconsolata", serif;
+
+    /* COLOR */
+    --BGCOLOR: #010409;
+    --BODY-BGCOLOR: #0d1117;
+    --BUTTON-COLOR: #e6edf3;
+    --FONT-COLOR: #e6edf3;
+    --HEADER-BGCOLOR: #161b22;
+    --LINK-ACTIVE: #ff7b72;
+    --LINK-COLOR: #79c0ff;
+    --LINK-HOVER: #7ee787;
+
+    /* BORDERS */
+    --BORDERS: 2px solid #6e7681;
+    --BORDER-RADIUS: 10px;
+}
+
+/* || GENERAL STYLES */
 .center {
     text-align: center;
 }
 
 html {
     scroll-behavior: smooth;
-    background-color: #010409;
+    font-family: var(--FF);
+    background-color: var(--BGCOLOR);
 }
 
 body {
-    background-color: #0d1117;
+    background-color: var(--BODY-BGCOLOR);
     color: #e6edf3;
     min-height: 100vh;
     max-width: 100%;
     margin: 0 auto;
-    border-left: 1px solid #6e7681;
-    border-right: 1px solid #6e7681;
-    font-family: "Open Sans", sans-serif;
+    border-left: var(--BORDERS);
+    border-right: var(--BORDERS);
 }
 
 header {
-    background-color: #161b22;
+    background-color: var(--HEADER-BGCOLOR);
     position: sticky;
     top: 0;
     z-index: 1;
@@ -54,7 +78,7 @@ header {
 h1,
 h2,
 h3 {
-    font-family: "Inconsolata", serif;
+    font-family: var(--FF-HEADINGS);
     font-weight: 900;
     padding: 1rem 0;
 }
@@ -81,7 +105,7 @@ nav {
     margin: 0;
     font-size: 1.2rem;
     text-align: center;
-    border: 2px solid #6e7681;
+    border: var(--BORDERS);
     overflow: hidden;
 }
 
@@ -101,22 +125,22 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a:focus {
-    border-radius: 10px;
+    border-radius: var(--BORDER-RADIUS);
     background-color: hsla(208, 100%, 74%, 0.1);
 }
 
-a {
-    color: #79c0ff;
+a:any-link {
+    color: var(--LINK-COLOR);
     text-decoration: none;
 }
 
 a:hover,
-a:focus {
-    color: #7ee787;
+a:focus-visible {
+    color: var(--LINK-HOVER);
 }
 
 a:active {
-    color: #ff7b72;
+    color: var(--LINK-ACTIVE);
 }
 
 h1 {
@@ -158,7 +182,7 @@ table {
 }
 
 .sched__header {
-    border-bottom: 2px solid #6e7681;
+    border-bottom: var(--BORDERS);
 }
 
 .sched__mr {
@@ -272,7 +296,7 @@ legend {
 }
 
 fieldset {
-    border-radius: 10px;
+    border-radius: var(--BORDER-RADIUS);
     padding: 1rem;
 }
 
@@ -289,7 +313,7 @@ select,
 textarea {
     background-color: #fffafa;
     padding: 0.5em;
-    border-radius: 10px;
+    border-radius: var(--BORDER-RADIUS);
     border-width: 2px;
     width: 100%;
 }
@@ -297,18 +321,18 @@ textarea {
 button {
     padding: 0.5em;
     width: 25%;
-    border-radius: 10px;
-    background-color: #e6edf3;
+    border-radius: var(--BORDER-RADIUS);
+    background-color: var(--BUTTON-COLOR);
     cursor: pointer;
 }
 
 footer {
     position: sticky;
     bottom: 0;
-    background-color: #161b22;
+    background-color: var(--HEADER-BGCOLOR);
     padding: 0.5rem;
     text-align: center;
-    border-top: 1px solid #6e7681;
+    border-top: var(--BORDERS);
 }
 
 footer p {
