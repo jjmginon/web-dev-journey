@@ -31,6 +31,7 @@ textarea {
     /* FONTS */
     --FF: "Open Sans", sans-serif;
     --FF-HEADINGS: "Inconsolata", serif;
+    --FS: clamp(0.75rem, 2vw, 1rem);
 
     /* COLOR */
     --BGCOLOR: #010409;
@@ -55,6 +56,7 @@ textarea {
 html {
     scroll-behavior: smooth;
     font-family: var(--FF);
+    font-size: var(--FS);
     background-color: var(--BGCOLOR);
 }
 
@@ -344,32 +346,32 @@ footer p {
 
 /* Mobile (small)*/
 @media screen and (max-width: 320.99px) {
-    html {
-        font-size: 0.675rem;
+    h1 {
+        font-size: 2.25rem;
     }
 
     article {
-        scroll-margin-top: 7.675rem;
+        scroll-margin-top: 7.5rem;
+    }
+
+    table {
+        font-size: 0.9rem;
     }
 }
 
 /* Mobile (medium)*/
 @media screen and (min-width: 321px) and (max-width: 375.99px) {
-    html {
-        font-size: 0.8rem;
+    article {
+        scroll-margin-top: 7.5rem;
     }
 
-    article {
-        scroll-margin-top: 7.675rem;
+    table {
+        font-size: clamp(0.9rem, 2vw, 1rem);
     }
 }
 
 /* Mobile (large)*/
 @media screen and (min-width: 376px) and (max-width: 425.99px) {
-    html {
-        font-size: 0.8rem;
-    }
-
     article {
         scroll-margin-top: 7.685rem;
     }
@@ -377,10 +379,6 @@ footer p {
 
 /* Tablet */
 @media screen and (min-width: 426px) and (max-width: 768.99px) {
-    html {
-        font-size: 0.925rem;
-    }
-
     article {
         scroll-margin-top: 7.7rem;
     }
@@ -394,7 +392,6 @@ footer p {
 
     article {
         scroll-margin-top: 7.7rem;
-
     }
 }
 
