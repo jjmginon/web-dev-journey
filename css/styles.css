@@ -42,10 +42,15 @@ textarea {
     --LINK-ACTIVE: #ff7b72;
     --LINK-COLOR: #79c0ff;
     --LINK-HOVER: #7ee787;
+    --INPUT-HOVER: #7ee787;
 
     /* BORDERS */
     --BORDERS: 2px solid #6e7681;
     --BORDER-RADIUS: 10px;
+
+    /* ANIMATIONS */
+    --ANI-DURATION: 0.5s;
+    --ANI-EASE: ease-in-out;
 }
 
 /* || GENERAL STYLES */
@@ -75,6 +80,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1;
+    animation: slideInDown var(--ANI-DURATION) var(--ANI-EASE);
 }
 
 h1,
@@ -83,6 +89,7 @@ h3 {
     font-family: var(--FF-HEADINGS);
     font-weight: 900;
     padding: 1rem 0;
+    animation: fadeIn var(--ANI-DURATION) var(--ANI-EASE);
 }
 
 h1 {
@@ -116,6 +123,7 @@ nav ul {
     justify-content: space-evenly;
     margin: 0;
     list-style-type: none;
+    animation: fadeInUp var(--ANI-DURATION) var(--ANI-EASE);
 }
 
 nav ul li a {
@@ -123,12 +131,14 @@ nav ul li a {
     padding: 0.5rem;
     font-family: "Inconsolata", serif;
     font-weight: bold;
+    transition: background-color var(--ANI-DURATION) var(--ANI-EASE), transform var(--ANI-DURATION) var(--ANI-EASE);
 }
 
 nav ul li a:hover,
 nav ul li a:focus {
     border-radius: var(--BORDER-RADIUS);
     background-color: hsla(208, 100%, 74%, 0.1);
+    transform: scale(1.1);
 }
 
 a:any-link {
@@ -310,6 +320,13 @@ fieldset:last-of-type label {
     display: block;
 }
 
+input,
+select,
+button,
+textarea {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
 input:not([type=radio], [type=checkbox]),
 select,
 textarea {
@@ -320,12 +337,28 @@ textarea {
     width: 100%;
 }
 
+input:hover,
+input:focus,
+select:hover,
+select:focus-visible,
+textarea:hover,
+textarea:focus-visible {
+    border-color: var(--INPUT-HOVER);
+    box-shadow: 0 0 5px rgba(126, 231, 135, 0.5);
+}
+
 button {
     padding: 0.5em;
     width: 25%;
     border-radius: var(--BORDER-RADIUS);
     background-color: var(--BUTTON-COLOR);
     cursor: pointer;
+    transition: background-color var(--ANI-DURATION) var(--ANI-EASE), transform var(--ANI-DURATION) var(--ANI-EASE);
+}
+
+button:hover {
+    background-color: var(--LINK-HOVER);
+    transform: scale(1.05);
 }
 
 footer {
@@ -335,6 +368,7 @@ footer {
     padding: 0.5rem;
     text-align: center;
     border-top: var(--BORDERS);
+    animation: slideInUp var(--ANI-DURATION) var(--ANI-EASE);
 }
 
 footer p {
@@ -344,7 +378,50 @@ footer p {
     margin-top: 0;
 }
 
-/* Mobile (small)*/
+/* Keyframes for Animations */
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile (small) */
 @media screen and (max-width: 320.99px) {
     h1 {
         font-size: 2.25rem;
@@ -359,7 +436,7 @@ footer p {
     }
 }
 
-/* Mobile (medium)*/
+/* Mobile (medium) */
 @media screen and (min-width: 321px) and (max-width: 375.99px) {
     article {
         scroll-margin-top: 7.5rem;
@@ -370,7 +447,7 @@ footer p {
     }
 }
 
-/* Mobile (large)*/
+/* Mobile (large) */
 @media screen and (min-width: 376px) and (max-width: 425.99px) {
     article {
         scroll-margin-top: 7.685rem;
