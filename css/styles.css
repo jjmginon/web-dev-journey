@@ -173,6 +173,13 @@ h3 {
     animation: fadeIn var(--ANI-DURATION) var(--ANI-EASE);
 }
 
+thead,
+tbody,
+tfoot,
+tr {
+    display: contents;
+}
+
 .journey__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
