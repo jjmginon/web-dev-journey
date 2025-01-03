@@ -12,24 +12,29 @@
 </head>
 
 <body>
-    <header>
-        <h1>My Plans for the Year</h1>
-
-        <nav>
-            <ul>
+    <header class="header">
+        <h1 class="header__h1">My Plans for the Year</h1>
+        <nav class="header__nav">
+            <ul class="header__ul">
                 <li>
-                    <a href="#journey">My Journey</a>
+                    <a href="/">Home</a>
                 </li>
                 <li>
-                    <a href="#vacation">Vacation Plans</a>
+                    <a href="vacation.html">Vacation</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
                 </li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <article id="journey">
-            <h2>I'm Ready to Learn Web Development</h2>
+    <main class="main">
+        <article id="journey" class="main__article journey">
+            <h2 class="journey__h2">I'm Ready to Learn Web Development</h2>
             <p>Join me on an exciting journey as I explore the fundamentals of web development.</p>
             <section class="html5">
                 <h3>HTML5</h3>
@@ -55,16 +60,17 @@
                             <a href="https://developer.mozilla.org/">MDN</a>
                         </abbr> resources.</li>
                 </ol>
-                <aside>
+                <aside class="achievement__trivia">
                     <details>
                         <summary>Can you figure out how many <mark>hours</mark> I spend coding each day?</summary>
-                        <p>I start my coding journey every evening at <time datetime="19:00">7 PM</time> and dedicate
+                        <p class="achievement__trivia-answer">
+                            I start my coding journey every evening at <time datetime="19:00">7 PM</time> and dedicate
                             <time datetime="PT2H">2 hours</time> to it.
                         </p>
                     </details>
                 </aside>
                 <br>
-                <table>
+                <table class="journey__container">
                     <caption class="offscreen">My Daily Schedule</caption>
                     <thead>
                         <tr>
@@ -132,196 +138,15 @@
                 </table>
             </section>
         </article>
-
-        <hr>
-
-        <article id="vacation">
-            <h2>Planning a Relaxing Vacation</h2>
-            <p>After all my hard work, I <em>really need a break</em> to relax and recharge.</p>
-            <p>Living in <abbr title="Manila">MNL</abbr>, I plan to go to a serene hot spring in Asia to unwind and
-                rejuvenate.</p>
-
-            <section>
-                <h3>Places I'd Love to Visit</h3>
-                <ul>
-                    <li>
-                        <p>Japan's hot springs have always held a special charm for me.</p>
-                        <figure>
-                            <img src="img/hgp-hakone-aiart-1024x704.jpg" alt="Tranquil hot spring in Hakone, Japan"
-                                title="Dreaming of visiting a hot spring in Japan" width="1024" height="704"
-                                loading="lazy">
-                            <figcaption class="offscreen">Vacation at a Hot Spring in Japan</figcaption>
-                        </figure>
-                    </li>
-                    <li>
-                        <p>One place that comes highly recommended is:</p>
-                        <address>
-                            Hakone Yuryo<br>
-                            4 Tonosawa, Hakone,<br>
-                            Ashigarashimo District,<br>
-                            Kanagawa 250-0315, Japan
-                        </address>
-                        <figure>
-                            <img src="img/hakone-yuryo-aiart-1024x512.jpg"
-                                alt="Evening at Hakone Yuryo hot spring, Japan"
-                                title="&quot;Once in a lifetime encounter.&quot;" width="1024" height="512"
-                                loading="lazy">
-                            <figcaption class="offscreen">A Night in Hakone Yuryo</figcaption>
-                        </figure>
-                    </li>
-                </ul>
-            </section>
-            <!-- TODO: Add more destinations -->
-            <section>
-                <h3>Places I'd Prefer to Avoid</h3>
-                <dl>
-                    <dt>Death Valley, USA</dt>
-                    <dd>Extreme heat conditions, highly <strong>dangerous</strong>.</dd>
-
-                    <dt>Chernobyl, Ukraine</dt>
-                    <dd>Severely contaminated due to a nuclear disaster.</dd>
-
-                    <dt>Mount Everest, Nepal</dt>
-                    <dd>Popular but perilous due to severe weather and high altitude.</dd>
-                </dl>
-            </section>
-        </article>
-
-        <hr>
-
-        <article id="contact">
-            <h2>Contact Me</h2>
-            <p>I'd really like to hear from you</p>
-
-            <form action="https://httpbin.org/get" method="get">
-                <fieldset>
-                    <legend>Personal Info</legend>
-                    <p>
-                        <label for="firstName">First Name:</label>
-                        <input type="text" name="firstName" id="firstName" placeholder="John" autocomplete="on"
-                            required>
-                    </p>
-                    <p>
-                        <label for="lastName">Last Name:</label>
-                        <input type="text" name="lastName" id="lastName" placeholder="Smith" autocomplete="on" required>
-                    </p>
-                    <p>
-                        <label for="password">Password:</label>
-                        <input type="password" name="password" id="password" placeholder="8-12 chars, incl. a number"
-                            required>
-                    </p>
-                    <p>
-                        <label for="phone">Phone:</label>
-                        <input type="tel" name="phone" id="phone" placeholder="1234567890"
-                            pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
-                    </p>
-                    <p>
-                        <label for="age">Age:</label>
-                        <input type="number" name="age" id="age" min="8" max="120" value="4">
-                    </p>
-                    <p>
-                        <label for="destination">Favorite Destination:</label>
-                        <select name="destination" id="destination" multiple size="5">
-                            <optgroup label="Continents">
-                                <option value="asia">Asia</option>
-                                <option value="europe">Europe</option>
-                            </optgroup>
-                            <optgroup label="Activities">
-                                <option value="beach">Beach</option>
-                                <option value="hot spring" selected>Hot Spring</option>
-                                <option value="mountain">Mountain</option>
-                                <option value="safari">Safari</option>
-                                <option value="city tour">City Tour</option>
-                            </optgroup>
-                            <option value="other">Other</option>
-                        </select>
-                    </p>
-                    <!-- <p>
-                    <label for="destination">Favorite Destination:</label>
-                    <input type="text" name="destination" id="destination" list="destination-list">
-                    <datalist id="destination-list">
-                        <option value="Asia">
-                        <option value="Europe">
-                        <option value="Beach">
-                        <option value="Hot Spring">
-                        <option value="Mountain">
-                        <option value="Safari">
-                        <option value="City Tour">
-                        <option value="Other">
-                    </datalist>
-                </p> -->
-                </fieldset>
-                <br>
-                <fieldset>
-                    <legend>What is your favorite food?</legend>
-                    <p>
-                        <input type="radio" name="food" id="tacos" value="tacos">
-                        <label for="tacos">Tacos</label>
-                    </p>
-                    <p>
-                        <input type="radio" name="food" id="pizza" value="pizza">
-                        <label for="pizza">Pizza</label>
-                    </p>
-                    <p>
-                        <input type="radio" name="food" id="ramen" value="ramen">
-                        <label for="ramen">Ramen</label>
-                    </p>
-                    <p>
-                        <input type="radio" name="food" id="burger" value="burger">
-                        <label for="burger">Burger</label>
-                    </p>
-                    <p>
-                        <input type="radio" name="food" id="other" value="other">
-                        <label for="other">Other</label>
-                    </p>
-                </fieldset>
-                <br>
-                <fieldset>
-                    <legend>What are your favorite travel activities?</legend>
-                    <p>
-                        <input type="checkbox" name="activities" id="sightseeing" value="sightseeing">
-                        <label for="sightseeing">Sightseeing</label>
-                    </p>
-                    <p>
-                        <input type="checkbox" name="activities" id="hiking" value="hiking">
-                        <label for="hiking">Hiking</label>
-                    </p>
-                    <p>
-                        <input type="checkbox" name="activities" id="beach" value="beach">
-                        <label for="beach">Beach</label>
-                    </p>
-                    <p>
-                        <input type="checkbox" name="activities" id="foodtour" value="foodtour">
-                        <label for="foodtour">Food Tour</label>
-                    </p>
-                    <p>
-                        <input type="checkbox" name="activities" id="otherActivity" value="other">
-                        <label for="otherActivity">Other</label>
-                    </p>
-                </fieldset>
-                <br>
-                <fieldset>
-                    <legend>Share Me Your Thoughts</legend>
-                    <label for="message">Your Message:</label>
-                    <br>
-                    <textarea name="message" id="message" cols="30" rows="10"
-                        placeholder="Enter your message here"></textarea>
-                </fieldset>
-                <br>
-                <button type="submit">Submit</button>
-                <button type="submit" formaction="https://httpbin.org/post" formmethod="post">Post</button>
-                <button type="reset">Reset</button>
-            </form>
-        </article>
     </main>
 
     <p class="center">
         <a href="#">Back to Top</a>
     </p>
 
-    <footer>
+    <footer class="footer">
         <p>
-            &lt; &gt; &copy; <a href="about.html">JJ Ginon</a> &lt;/ &gt;
+            &lt; &gt; Copyright &copy; <a href="about.html">JJ Ginon</a> &lt;/ &gt;
         </p>
     </footer>
 </body>
