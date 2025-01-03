@@ -75,7 +75,7 @@ body {
     border-right: var(--BORDERS);
 }
 
-header {
+.header {
     background-color: var(--HEADER-BGCOLOR);
     position: sticky;
     top: 0;
@@ -83,34 +83,16 @@ header {
     animation: slideInDown var(--ANI-DURATION) var(--ANI-EASE);
 }
 
-h1,
-h2,
-h3 {
+.header__h1 {
     font-family: var(--FF-HEADINGS);
     font-weight: 900;
+    font-size: 2.5rem;
+    text-align: center;
     padding: 1rem 0;
     animation: fadeIn var(--ANI-DURATION) var(--ANI-EASE);
 }
 
-h1 {
-    font-size: 2.5rem;
-}
-
-h2 {
-    font-size: 1.75rem;
-}
-
-h3 {
-    font-size: 1.5rem;
-    padding-bottom: 0;
-}
-
-article {
-    scroll-margin-top: 7.675rem;
-    padding: 1.5rem;
-}
-
-nav {
+.header__nav {
     margin: 0;
     font-size: 1.2rem;
     text-align: center;
@@ -118,7 +100,7 @@ nav {
     overflow: hidden;
 }
 
-nav ul {
+.header__ul {
     display: flex;
     justify-content: space-evenly;
     margin: 0;
@@ -126,7 +108,7 @@ nav ul {
     animation: fadeInUp var(--ANI-DURATION) var(--ANI-EASE);
 }
 
-nav ul li a {
+.header__ul li a {
     display: block;
     padding: 0.5rem;
     font-family: "Inconsolata", serif;
@@ -134,8 +116,8 @@ nav ul li a {
     transition: background-color var(--ANI-DURATION) var(--ANI-EASE), transform var(--ANI-DURATION) var(--ANI-EASE);
 }
 
-nav ul li a:hover,
-nav ul li a:focus {
+.header__ul li a:hover,
+.header__ul li a:focus {
     border-radius: var(--BORDER-RADIUS);
     background-color: hsla(208, 100%, 74%, 0.1);
     transform: scale(1.1);
@@ -155,10 +137,6 @@ a:active {
     color: var(--LINK-ACTIVE);
 }
 
-h1 {
-    text-align: center;
-}
-
 p {
     margin-top: 1rem;
     padding-bottom: 0.5rem;
@@ -170,14 +148,32 @@ details p {
     font-style: italic;
 }
 
-thead,
-tbody,
-tfoot,
-tr {
-    display: contents;
+.main__article {
+    scroll-margin-top: 7.675rem;
+    padding: 1.5rem;
 }
 
-table {
+.about__h2,
+.info__h2,
+.sample__h2,
+.journey__h2,
+.vacation__h2 {
+    font-family: var(--FF-HEADINGS);
+    font-weight: 900;
+    font-size: 1.75rem;
+    padding: 1rem 0;
+    animation: fadeIn var(--ANI-DURATION) var(--ANI-EASE);
+}
+
+h3 {
+    font-family: var(--FF-HEADINGS);
+    font-weight: 900;
+    font-size: 1.5rem;
+    padding-bottom: 0;
+    animation: fadeIn var(--ANI-DURATION) var(--ANI-EASE);
+}
+
+.journey__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
@@ -243,11 +239,6 @@ table {
     border: medium ridge #6e7681;
 }
 
-.sched__item {
-    display: grid;
-    place-content: center;
-}
-
 thead th:first-child {
     border-top-left-radius: 10px;
 }
@@ -301,7 +292,7 @@ address {
     padding: 1rem 0;
 }
 
-legend {
+.legend {
     padding: 0.5rem;
     text-align: center;
     font-weight: bold;
@@ -353,7 +344,7 @@ button {
     border-radius: var(--BORDER-RADIUS);
     background-color: var(--BUTTON-COLOR);
     cursor: pointer;
-    transition: background-color var(--ANI-DURATION) var(--ANI-EASE), transform var(--ANI-DURATION) var(--ANI-EASE);
+    transition: background-color var(--ANI-DURATION) var (--ANI-EASE), transform var(--ANI-DURATION) var(--ANI-EASE);
 }
 
 button:hover {
@@ -361,7 +352,7 @@ button:hover {
     transform: scale(1.05);
 }
 
-footer {
+.footer {
     position: sticky;
     bottom: 0;
     background-color: var(--HEADER-BGCOLOR);
@@ -371,7 +362,7 @@ footer {
     animation: slideInUp var(--ANI-DURATION) var(--ANI-EASE);
 }
 
-footer p {
+.footer p {
     font-family: "Inconsolata", serif;
     font-weight: bold;
     padding: 0;
@@ -423,40 +414,40 @@ footer p {
 
 /* Mobile (small) */
 @media screen and (max-width: 320.99px) {
-    h1 {
+    .header__h1 {
         font-size: 2.25rem;
     }
 
-    article {
+    .main__article {
         scroll-margin-top: 7.5rem;
     }
 
-    table {
+    .journey__container {
         font-size: 0.9rem;
     }
 }
 
 /* Mobile (medium) */
 @media screen and (min-width: 321px) and (max-width: 375.99px) {
-    article {
+    .main__article {
         scroll-margin-top: 7.5rem;
     }
 
-    table {
+    .journey__container {
         font-size: clamp(0.9rem, 2vw, 1rem);
     }
 }
 
 /* Mobile (large) */
 @media screen and (min-width: 376px) and (max-width: 425.99px) {
-    article {
+    .main__article {
         scroll-margin-top: 7.685rem;
     }
 }
 
 /* Tablet */
 @media screen and (min-width: 426px) and (max-width: 768.99px) {
-    article {
+    .main__article {
         scroll-margin-top: 7.7rem;
     }
 }
@@ -467,7 +458,7 @@ footer p {
         max-width: 720px;
     }
 
-    article {
+    .main__article {
         scroll-margin-top: 7.7rem;
     }
 }
@@ -478,7 +469,7 @@ footer p {
         max-width: 720px;
     }
 
-    article {
+    .main__article {
         scroll-margin-top: 7.7rem;
     }
 }
