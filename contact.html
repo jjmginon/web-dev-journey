@@ -38,35 +38,36 @@
             <h2 class="contact__h2">Contact Me</h2>
             <p>I'd really like to hear from you</p>
 
-            <form action="https://httpbin.org/get" method="get">
-                <fieldset>
+            <form action="https://httpbin.org/get" method="get" class="contact__form">
+                <fieldset class="contact__fieldset">
                     <legend>Personal Info</legend>
-                    <p>
-                        <label for="firstName">First Name:</label>
-                        <input type="text" name="firstName" id="firstName" placeholder="John" autocomplete="on"
-                            required>
+                    <p class="contact__p">
+                        <label class="contact__label" for="firstName">First Name:</label>
+                        <input class="contact__input" type="text" name="firstName" id="firstName" placeholder="John"
+                            autocomplete="on" required>
                     </p>
-                    <p>
-                        <label for="lastName">Last Name:</label>
-                        <input type="text" name="lastName" id="lastName" placeholder="Smith" autocomplete="on" required>
+                    <p class="contact__p">
+                        <label class="contact__label" for="lastName">Last Name:</label>
+                        <input class="contact__input" type="text" name="lastName" id="lastName" placeholder="Smith"
+                            autocomplete="on" required>
                     </p>
-                    <p>
-                        <label for="password">Password:</label>
-                        <input type="password" name="password" id="password" placeholder="8-12 chars, incl. a number"
-                            required>
+                    <p class="contact__p">
+                        <label class="contact__label" for="password">Password:</label>
+                        <input class="contact__input" type="password" name="password" id="password"
+                            placeholder="8-12 chars, incl. a number" required>
                     </p>
-                    <p>
-                        <label for="phone">Phone:</label>
-                        <input type="tel" name="phone" id="phone" placeholder="1234567890"
+                    <p class="contact__p">
+                        <label class="contact__label" for="phone">Phone:</label>
+                        <input class="contact__input" type="tel" name="phone" id="phone" placeholder="1234567890"
                             pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
                     </p>
-                    <p>
-                        <label for="age">Age:</label>
-                        <input type="number" name="age" id="age" min="8" max="120" value="4">
+                    <p class="contact__p">
+                        <label class="contact__label" for="age">Age:</label>
+                        <input class="contact__input" type="number" name="age" id="age" min="8" max="120" value="4">
                     </p>
-                    <p>
-                        <label for="destination">Favorite Destination:</label>
-                        <select name="destination" id="destination" multiple size="5">
+                    <p class="contact__p">
+                        <label class="contact__label" for="destination">Favorite Destination:</label>
+                        <select class="contact__select" name="destination" id="destination" multiple size="5">
                             <optgroup label="Continents">
                                 <option value="asia">Asia</option>
                                 <option value="europe">Europe</option>
@@ -97,65 +98,68 @@
                 </p> -->
                 </fieldset>
                 <br>
-                <fieldset>
+                <fieldset class="contact__fieldset">
                     <legend>What is your favorite food?</legend>
-                    <p>
-                        <input type="radio" name="food" id="tacos" value="tacos">
-                        <label for="tacos">Tacos</label>
+                    <p class="contact__p">
+                        <input class="contact__input" type="radio" name="food" id="tacos" value="tacos">
+                        <label class="contact__label" for="tacos">Tacos</label>
                     </p>
-                    <p>
-                        <input type="radio" name="food" id="pizza" value="pizza">
-                        <label for="pizza">Pizza</label>
+                    <p class="contact__p">
+                        <input class="contact__input" type="radio" name="food" id="pizza" value="pizza">
+                        <label class="contact__label" for="pizza">Pizza</label>
                     </p>
-                    <p>
-                        <input type="radio" name="food" id="ramen" value="ramen">
-                        <label for="ramen">Ramen</label>
+                    <p class="contact__p">
+                        <input class="contact__input" type="radio" name="food" id="ramen" value="ramen">
+                        <label class="contact__label" for="ramen">Ramen</label>
                     </p>
-                    <p>
-                        <input type="radio" name="food" id="burger" value="burger">
-                        <label for="burger">Burger</label>
+                    <p class="contact__p">
+                        <input class="contact__input" type="radio" name="food" id="burger" value="burger">
+                        <label class="contact__label" for="burger">Burger</label>
                     </p>
-                    <p>
-                        <input type="radio" name="food" id="other" value="other">
-                        <label for="other">Other</label>
+                    <p class="contact__p">
+                        <input class="contact__input" type="radio" name="food" id="other" value="other">
+                        <label class="contact__label" for="other">Other</label>
                     </p>
                 </fieldset>
                 <br>
-                <fieldset>
+                <fieldset class="contact__fieldset">
                     <legend>What are your favorite travel activities?</legend>
-                    <p>
-                        <input type="checkbox" name="activities" id="sightseeing" value="sightseeing">
-                        <label for="sightseeing">Sightseeing</label>
+                    <p class="contact__p">
+                        <input class="contact__input" type="checkbox" name="activities" id="sightseeing"
+                            value="sightseeing">
+                        <label class="contact__label" for="sightseeing">Sightseeing</label>
                     </p>
-                    <p>
-                        <input type="checkbox" name="activities" id="hiking" value="hiking">
-                        <label for="hiking">Hiking</label>
+                    <p class="contact__p">
+                        <input class="contact__input" type="checkbox" name="activities" id="hiking" value="hiking">
+                        <label class="contact__label" for="hiking">Hiking</label>
                     </p>
-                    <p>
-                        <input type="checkbox" name="activities" id="beach" value="beach">
-                        <label for="beach">Beach</label>
+                    <p class="contact__p">
+                        <input class="contact__input" type="checkbox" name="activities" id="beach" value="beach">
+                        <label class="contact__label" for="beach">Beach</label>
                     </p>
-                    <p>
-                        <input type="checkbox" name="activities" id="foodtour" value="foodtour">
-                        <label for="foodtour">Food Tour</label>
+                    <p class="contact__p">
+                        <input class="contact__input" type="checkbox" name="activities" id="foodtour" value="foodtour">
+                        <label class="contact__label" for="foodtour">Food Tour</label>
                     </p>
-                    <p>
-                        <input type="checkbox" name="activities" id="otherActivity" value="other">
-                        <label for="otherActivity">Other</label>
+                    <p class="contact__p">
+                        <input class="contact__input" type="checkbox" name="activities" id="otherActivity"
+                            value="other">
+                        <label class="contact__label" for="otherActivity">Other</label>
                     </p>
                 </fieldset>
                 <br>
-                <fieldset>
+                <fieldset class="contact__fieldset">
                     <legend>Share Me Your Thoughts</legend>
-                    <label for="message">Your Message:</label>
+                    <label class="contact__label" for="message">Your Message:</label>
                     <br>
-                    <textarea name="message" id="message" cols="30" rows="10"
+                    <textarea class="contact__textarea" name="message" id="message" cols="30" rows="10"
                         placeholder="Enter your message here"></textarea>
                 </fieldset>
                 <br>
-                <button type="submit">Submit</button>
-                <button type="submit" formaction="https://httpbin.org/post" formmethod="post">Post</button>
-                <button type="reset">Reset</button>
+                <button class="contact__button" type="submit">Submit</button>
+                <button class="contact__button" type="submit" formaction="https://httpbin.org/post"
+                    formmethod="post">Post</button>
+                <button class="contact__button" type="reset">Reset</button>
             </form>
         </article>
     </main>
