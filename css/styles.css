@@ -303,6 +303,12 @@ tfoot td {
 }
 
 /* || CONTACT */
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .legend {
     padding: 0.5rem;
     text-align: center;
@@ -310,6 +316,7 @@ tfoot td {
 }
 
 .contact__fieldset {
+    width: 100%;
     border-radius: var(--BORDER-RADIUS);
     padding: 1rem;
 }
@@ -349,9 +356,15 @@ tfoot td {
     box-shadow: 0 0 5px rgba(126, 231, 135, 0.5);
 }
 
+.button-container {
+    display: flex;
+    border: none;
+    gap: 1em;
+}
+
 .contact__button {
     padding: 0.5em;
-    width: 25%;
+    width: 33%;
     border-radius: var(--BORDER-RADIUS);
     background-color: var(--BUTTON-COLOR);
     cursor: pointer;
@@ -434,12 +447,43 @@ tfoot td {
     .journey__container {
         font-size: 0.9rem;
     }
+
+    .button-container {
+        flex-direction: column;
+    }
+
+    .contact__button {
+        width: 100%;
+    }
 }
 
 /* MOBILE (M) */
 @media screen and (min-width: 321px) and (max-width: 375.99px) {
     .journey__container {
         font-size: clamp(0.9rem, 2vw, 1rem);
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+
+    .contact__button {
+        width: 100%;
+    }
+}
+
+/* MOBILE (L) */
+@media screen and (min-width: 376px) and (max-width: 425.99px) {
+    .journey__container {
+        font-size: clamp(0.9rem, 2vw, 1rem);
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+
+    .contact__button {
+        width: 100%;
     }
 }
 
