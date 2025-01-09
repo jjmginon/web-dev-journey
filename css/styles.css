@@ -59,29 +59,29 @@ textarea {
 
 /* || GENERAL STYLES */
 html {
-    scroll-behavior: smooth;
     font-family: var(--FF);
     font-size: var(--FS);
     background-color: var(--BGCOLOR);
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: var(--BODY-BGCOLOR);
-    color: #e6edf3;
-    min-height: 100vh;
-    max-width: 100%;
     margin: 0 auto;
+    max-width: 100%;
+    min-height: 100vh;
     border-left: var(--BORDERS);
     border-right: var(--BORDERS);
+    color: #e6edf3;
+    background-color: var(--BODY-BGCOLOR);
 }
 
 h1,
 h2,
 h3 {
-    font-family: var(--FF-HEADINGS);
-    font-weight: 900;
-    font-size: 1.5rem;
     padding-bottom: 0;
+    font-family: var(--FF-HEADINGS);
+    font-size: 1.5rem;
+    font-weight: 900;
     animation: fadeIn var(--ANI-DURATION) var(--ANI-EASE);
 }
 
@@ -122,27 +122,27 @@ address {
 
 /* || HEADER */
 .header {
-    background-color: var(--HEADER-BGCOLOR);
     position: sticky;
     top: 0;
     z-index: 1;
+    background-color: var(--HEADER-BGCOLOR);
     animation: slideInDown var(--ANI-DURATION) var(--ANI-EASE);
 }
 
 .header__h1 {
-    font-family: var(--FF-HEADINGS);
-    font-weight: 900;
-    font-size: 2.5rem;
-    text-align: center;
     padding: 1rem 0;
+    font-family: var(--FF-HEADINGS);
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-align: center;
 }
 
 .header__nav {
     margin: 0;
-    font-size: 1.2rem;
-    text-align: center;
     border: var(--BORDERS);
     overflow: hidden;
+    font-size: 1.2rem;
+    text-align: center;
 }
 
 .header__ul {
@@ -175,8 +175,8 @@ address {
 
 /* || MAIN */
 .main__article {
-    scroll-margin-top: 7.675rem;
     padding: 1.5rem;
+    scroll-margin-top: 7.675rem;
 }
 
 .about__h2,
@@ -184,10 +184,10 @@ address {
 .sample__h2,
 .journey__h2,
 .vacation__h2 {
-    font-family: var(--FF-HEADINGS);
-    font-weight: 900;
-    font-size: 1.75rem;
     padding: 1rem 0;
+    font-family: var(--FF-HEADINGS);
+    font-size: 1.75rem;
+    font-weight: 900;
 }
 
 /* || JOURNEY */
@@ -225,6 +225,7 @@ tr {
 
 .journey__container {
     display: grid;
+    gap: 0.1em;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
         "hd1 hd1 hd3"
@@ -235,7 +236,6 @@ tr {
         "en ot ena"
         "ln ot lna"
         "ft ft ft";
-    gap: 0.1em;
     margin-bottom: 1em;
 }
 
@@ -276,16 +276,16 @@ tr {
 }
 
 .sched__item {
-    height: 100%;
     display: grid;
     place-content: center;
+    height: 100%;
     text-align: center;
 }
 
 .sched__header,
 .sched__item {
-    width: 100%;
     padding: 1em;
+    width: 100%;
     border: medium ridge #6e7681;
 }
 
@@ -298,8 +298,8 @@ thead th:last-child {
 }
 
 tfoot td {
-    border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 /* || CONTACT */
@@ -311,14 +311,14 @@ tfoot td {
 
 .legend {
     padding: 0.5rem;
-    text-align: center;
     font-weight: bold;
+    text-align: center;
 }
 
 .contact__fieldset {
-    width: 100%;
-    border-radius: var(--BORDER-RADIUS);
     padding: 1rem;
+    border-radius: var(--BORDER-RADIUS);
+    width: 100%;
 }
 
 .contact__fieldset:first-of-type label {
@@ -339,11 +339,11 @@ tfoot td {
 .contact__input:not([type=radio], [type=checkbox]),
 .contact__select,
 .contact__textarea {
-    background-color: #fffafa;
     padding: 0.5em;
     border-radius: var(--BORDER-RADIUS);
     border-width: 2px;
     width: 100%;
+    background-color: #fffafa;
 }
 
 .contact__input:hover,
@@ -358,17 +358,17 @@ tfoot td {
 
 .button-container {
     display: flex;
-    border: none;
     gap: 1em;
+    border: none;
 }
 
 .contact__button {
     padding: 0.5em;
-    width: 33%;
     border-radius: var(--BORDER-RADIUS);
+    width: 33%;
     background-color: var(--BUTTON-COLOR);
-    cursor: pointer;
     transition: background-color var(--ANI-DURATION) var (--ANI-EASE), transform var(--ANI-DURATION) var(--ANI-EASE);
+    cursor: pointer;
 }
 
 .contact__button:hover {
@@ -380,18 +380,18 @@ tfoot td {
 .footer {
     position: sticky;
     bottom: 0;
-    background-color: var(--HEADER-BGCOLOR);
     padding: 0.5rem;
-    text-align: center;
     border-top: var(--BORDERS);
+    text-align: center;
+    background-color: var(--HEADER-BGCOLOR);
     animation: slideInUp var(--ANI-DURATION) var(--ANI-EASE);
 }
 
 .footer p {
-    font-family: "Inconsolata", serif;
-    font-weight: bold;
-    padding: 0;
     margin-top: 0;
+    padding: 0;
+    font-family: var(--FF-HEADINGS);
+    font-weight: bold;
 }
 
 /* || KEYFRAMES */
